@@ -1,0 +1,49 @@
+/* Estilo para el contenedor de botones */
+#buttonsContainer {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio superior */
+  }
+  
+  /* Estilo para los botones dentro del contenedor */
+  #buttonsContainer button {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF; /* Color del texto en los botones */
+    background-color: #32424A; /* Color de fondo de los botones */
+    border: none;
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de fuente en botones */
+    margin: 5px; /* Espaciado alrededor del botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+  }
+  
+  /* Botón para eliminar contenido */
+  #clearButton {
+    background-color: #E4003A; /* Color de fondo específico para el botón eliminar */
+  }
+  
+  #clearButton:hover {
+    background-color: #C70039; /* Color de fondo al pasar el cursor */
+  }
+  
+  /* Botón para copiar contenido */
+  #copyButton {
+    background-color: #EB5B00; /* Color de fondo específico para el botón copiar */
+  }
+  
+  #copyButton:hover {
+    background-color: #D95300; /* Color de fondo al pasar el cursor */
+  }
+  
+  /* Botón para copiar tabla de verdad */
+  #pasteButton {
+    background-color: #FFB200; /* Color de fondo específico para el botón copiar tabla */
+  }
+  
+  #pasteButton:hover {
+    background-color: #FFC107; /* Color de fondo al pasar el cursor */
+  }
+  

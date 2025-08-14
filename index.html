@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generador de tablas de verdad basado en la implementación de Stanford. Mostrando y resaltando por los True y False de la tabla"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/ia-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="icon" type="image/png" href="images/truthtable.png" />
+    <title>Generador de tabla de verdad</title>
+  </head>
+  <body>
+    <main>
+      <h1>Generador de Tabla de Verdad</h1>
+      <div>
+        <span>Acepta sintaxis LaTeX o los símbolos ¬, ∧, ∨, →, ↔</span>
+      </div>
+
+      <h2>Conectores Proposicionales</h2>
+      <div id="simbolosContainer"></div>
+
+      <input
+        type="text"
+        placeholder="Introduce una fórmula"
+        id="expressionInput"
+        oninput="go()"
+      />
+
+      <div id="table-target"></div>
+
+      <div id="buttonsContainer">
+        <button id="clearButton" title="Eliminar Formula">
+          <span class="material-icons">delete</span>
+        </button>
+        <button id="copyButton" title="Copiar Formula">
+          <span class="material-icons">content_copy</span>
+        </button>
+        <button id="pasteButton" title="Copiar tabla de verdad">
+          <span class="material-icons">content_paste</span>
+        </button>
+        <button id="globalResetBtn" title="Reiniciar todo">
+          <span class="material-icons">refresh</span>
+        </button>
+      </div>
+
+      <section id="ai-section" class="ai-card">
+        <h2 class="ai-title">Resolver desde imagen (enunciado/ejercicio)</h2>
+
+        <p class="ai-subtitle">
+          Sube una imagen del
+          <strong>enunciado o ejercicio</strong> (PNG/JPG/WebP).
+        </p>
+
+        <div class="ai-actions">
+          <label class="ai-file">
+            <input id="exerciseImage" type="file" accept="image/*" />
+            <span class="ai-file-label">
+              <span class="material-icons">upload_file</span>
+              Elegir imagen
+            </span>
+            <span class="ai-file-name" id="aiFileName"
+              >Ningún archivo seleccionado</span
+            >
+          </label>
+
+          <button
+            id="sendToAiBtn"
+            type="button"
+            class="btn ai-btn-primary"
+            title="Enviar a IA"
+          >
+            <span class="material-icons">bolt</span> Enviar a IA
+          </button>
+
+          <span id="aiStatus" class="ai-status"> </span>
+        </div>
+
+        <div class="ai-preview" id="imagePreview"></div>
+
+        <div class="ai-output">
+          <label for="aiAnswer" class="ai-output-label"
+            >Respuesta de la IA</label
+          >
+          <textarea
+            id="aiAnswer"
+            class="ai-textarea"
+            rows="8"
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="ai-cta">
+          <button
+            id="applyParsedFormulaBtn"
+            type="button"
+            class="btn ai-btn-primary"
+            title="Usar fórmula detectada por IA"
+          >
+            <span class="material-icons">play_arrow</span> Usar fórmula y
+            generar tabla
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/symbols.js"></script>
+    <script src="js/actions.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/ai-browser.js"></script>
+  </body>
+</html>

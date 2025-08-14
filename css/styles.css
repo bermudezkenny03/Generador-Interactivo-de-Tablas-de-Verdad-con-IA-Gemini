@@ -1,0 +1,104 @@
+/* Estilos generales para centrar elementos y agregar separación */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #F5F5F5; /* Color de texto principal */
+    background-color: #151515; /* Color de fondo (opcional) */
+    text-align: center; /* Centra el texto en todo el cuerpo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Centra el contenido principal y agrega separación entre los elementos */
+.container {
+    max-width: 1200px; /* Ajusta según sea necesario */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px;
+    color: #F5F5F5; /* Espaciado alrededor del contenido */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #F5F5F5; /* Color de los encabezados */
+    margin: 20px 0; /* Espaciado superior e inferior de los encabezados */
+}
+
+p, li, td, th, span, div, a {
+    color: #F5F5F5; /* Color de texto secundario */
+    font-size: 16px; /* Tamaño de fuente por defecto */
+    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+    margin: 10px 0; /* Espaciado superior e inferior de los párrafos y otros elementos */
+}
+
+input[type="text"] {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Asegúrate de que coincida con el tamaño de los otros elementos */
+    padding: 8px; /* Ajusta el padding según sea necesario */
+    border: 1px solid #ccc; /* Estilo del borde, ajusta según sea necesario */
+    border-radius: 10px; /* Opcional: redondear los bordes */
+    width: 50%; /* O ajusta al ancho que desees */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+    color: #F5F5F5; /* Color del texto dentro del input */
+    background-color: #333; /* Puedes ajustar el color de fondo del input si es necesario */
+  }
+
+button {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF; /* Color del texto en los botones */
+    background-color: #32424A; /* Color de fondo de los botones */
+    border: none;
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de fuente en botones */
+    margin: 10px; /* Espaciado alrededor del botón */
+}
+
+button:hover {
+    background-color: #606470; /* Color de fondo del botón al pasar el cursor */
+}
+
+table {
+    font-family: 'Poppins', sans-serif;
+    color: #323643; /* Color de texto en la tabla */
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+    margin: 20px auto; /* Centra la tabla y agrega espaciado vertical */
+}
+
+th, td {
+    border: 1px solid #d1d1d1; /* Color de borde de las celdas */
+    padding: 8px;
+    text-align: center; /* Centra el contenido en las celdas */
+}
+
+th {
+    background-color: #32424A; /* Color de fondo de los encabezados de tabla */
+    color: #FFFFFF; /* Color del texto en los encabezados de tabla */
+}
+
+.header {
+    font-weight: 600; /* Peso de fuente para los encabezados */
+}
+
+.truthTable {
+    border-collapse: collapse;
+    margin: 20px auto; /* Centra la tabla de verdad y agrega espaciado vertical */
+    width: 80%; /* Ajusta el ancho de la tabla según sea necesario */
+}
+
+.truthTable th, .truthTable td {
+    border: 1px solid #d1d1d1;
+    padding: 8px;
+    text-align: center; /* Centra el contenido en las celdas */
+}
+
+.truthTable .header {
+    background-color: #32424A;
+    color: #FFFFFF;
+}
+
+.truthTable .row-true {
+    background-color: #6EC207; /* Color de fila para valores verdaderos */
+}
+
+.truthTable .row-false {
+    background-color: #C7253E; /* Color de fila para valores falsos */
+}

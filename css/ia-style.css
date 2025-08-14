@@ -1,0 +1,219 @@
+/* =========================
+   IA Section (dark, limpio)
+========================= */
+.ai-card {
+  background: #1d1f21; /* panel oscuro */
+  border: 1px solid #2a2e33; /* borde sutil */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 28px auto 0;
+  max-width: 980px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  text-align: left; /* contenido alineado, manteniendo el tema */
+}
+
+.ai-title,
+.ai-subtitle {
+  text-align: center;
+}
+
+.ai-title {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.ai-subtitle {
+  margin: 0 0 16px 0;
+  color: #cfd3d6;
+  font-size: 14px;
+}
+
+/* Acciones superiores: file + enviar + status */
+.ai-actions {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .ai-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Input file bonito */
+.ai-file {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  background: #23262a;
+  border: 1px solid #30353a;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.ai-file input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ai-file-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #32424a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.ai-file-label:hover {
+  background: #3b4c55;
+}
+
+.ai-file-name {
+  color: #b9c0c4;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Botones IA reutilizando tu estilo base */
+.btn {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #32424a;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.06s ease;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: #606470;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+
+.ai-btn-primary {
+  background: linear-gradient(135deg, #3c6e71, #2e3f45);
+  border: 1px solid #35545a;
+}
+.ai-btn-primary:hover {
+  background: linear-gradient(135deg, #447b7f, #33474d);
+}
+
+.ai-btn-accent {
+  background: linear-gradient(135deg, #6ec207, #4d8a05);
+  border: 1px solid #5aa106;
+  color: #0e1a00;
+}
+.ai-btn-accent:hover {
+  background: linear-gradient(135deg, #7bd10b, #579a06);
+}
+
+/* Estado (procesando, reintentando…) */
+.ai-status {
+  justify-self: end;
+  font-size: 13px;
+  color: #cbd5dc;
+  opacity: 0.9;
+}
+@media (max-width: 720px) {
+  .ai-status {
+    justify-self: start;
+  }
+}
+
+/* Vista previa imagen */
+.ai-preview {
+  display: grid;
+  place-items: center;
+  margin-top: 14px;
+  padding: 12px;
+  background: #161819;
+  border: 1px dashed #2a2e33;
+  border-radius: 10px;
+  min-height: 120px;
+}
+.ai-preview img {
+  max-width: 100%;
+  width: min(420px, 100%);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Respuesta IA */
+.ai-output {
+  margin-top: 14px;
+}
+.ai-output-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e6e9ec;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.ai-textarea {
+  width: 97%;
+  min-height: 180px;
+  resize: vertical;
+  background: #0f1113;
+  color: #e9eef2;
+  border: 1px solid #2a2e33;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.ai-textarea:focus {
+  border-color: #3c6e71;
+  box-shadow: 0 0 0 2px rgba(60, 110, 113, 0.25);
+}
+
+/* CTA inferior */
+.ai-cta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+@media (max-width: 720px) {
+  .ai-cta {
+    justify-content: stretch;
+  }
+  .ai-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Afinación para inputs y botones existentes si se usan en la IA */
+#ai-section input[type="text"],
+#ai-section input[type="file"] + .ai-file-label,
+#ai-section button {
+  font-size: 14px;
+}
